@@ -1,0 +1,13 @@
+Segundo desafio:
+Faça um programa para calcular o valor de uma viagem.
+
+Serão 3 variáveis. 
+Sendo elas:
+1 - Preço do etanol;
+2 - Preço da gasolina;
+3 - Tipo de combustível que está no carro;
+2 - Gasto médio de combustível por KM;
+3 - Distância em KM da viagem.
+
+Imprima no console o valor que será gasto para realizar esta viagem.
+

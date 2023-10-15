@@ -1,0 +1,244 @@
+<!-- Aula 04: Estruturas condicionais -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aula 04 Estruturas condicionais - JavaScript</title>
+</head>
+<body>
+	<h1>Aula 04 Estruturas condicionais</h1>
+	<h2>Objetivos</h2>
+	<p>
+		O que são estruturas condicioanais?;<br>
+		Estruturas de decisão;<br>
+		Estruturas de repetição;
+	</p>
+
+	<h2>Estruturas condicionais</h2>
+	<p>
+		São instruções para realizar determinadas tarefas a partir de uma condição, seja de decisão ou repetição;<br>
+		Exemplo:<br>
+		Um jogo precisa mudar o placar toda vez que um jogador marcar pontuação;
+	</p>
+
+	<h3>if</h3>
+	<p>
+		Podemos usar as palavras reservadas "if" para estabelecer uma condição:<br>
+		Exemplo:<br>
+		<pre><code>
+			<strong>var</strong> jogador1 = 0;
+				   <strong>var</strong> jogador2 = 0;
+
+				   <strong>if</strong> (jogador1 > 0) {
+				   		console.log('Jogador1 marcou ponto');
+				   }
+		</pre></code><br>
+
+		como ler: se o jogador1 tiver valor maior que 0 ele marcou ponto.
+	</p>
+	<h3>else</h3>
+	<p>
+		No caso de a condição não ser atendida podemos usar o "else":<br>
+		Exemplo:<br>
+		<pre><code>
+			<strong>var</strong> jogador1 = 0;
+				   <strong>var</strong> jogador2 = 0;
+
+				   <strong>if</strong> (jogador1 > 0) {
+				   		console.log('Jogador1 marcou ponto');
+				   } <strong>else</strong> {
+				   		console.log('Ninguém marcou ponto.');
+				   }
+		</pre></code><br>
+	</p>
+	<h3>else if</h3>
+	<p>
+		Caso haja mais de uma condição usamos o "else if".<br>
+		Exemplo:<br>
+		<pre><code>
+			<strong>var</strong> jogador1 = 0;
+				   <strong>var</strong> jogador2 = 0;
+
+				   <strong>if</strong> (jogador1 > 0) {
+				   		console.log('Jogador1 marcou ponto!');
+				   } <strong>else if</strong> (jogador2 > 0) {
+				   		console.log('Jogador2 marcou ponto!');
+				   }
+				   } <strong>else</strong> {
+				   		console.log('Ninguém marcou ponto.');
+				   }
+		</pre></code><br>
+	</p>
+	<h3>ninho de if</h3>
+	<p>
+		Podemos também usar o "if" dentro de um outro "if", chamamos isso de aninhamento de if's ou ninho de if's.<br>
+		Exemplo:<br>
+		<pre><code>
+			<strong>if</strong>(jogador1 = -1) {
+				<strong>if</strong>(jogador1 > 0) {
+					console.log('Jogador 1 marcou ponto');
+				} <strong>else</strong> {
+					console.log('Ninguém marcou ponto');
+				}
+			} <strong>else</strong> {
+				console.log('Jogador inválido');
+			}
+		</code></pre>
+	</p>
+	<h3>if ternário</h3>
+	<p>
+		Podemos também fazer uma verificação em uma única linha usando o "if" ternário:<br>
+		Exemplo:<br>
+		<pre><code>
+			<strong>[condição]?[instrução1]:[instrução2];</strong><br>
+
+			jogador1 > 0 <strong>?</strong> console.log('marcou ponto'): console.log('não marcou ponto');
+		</code></pre>
+		
+		lembre de usar a interrogação "?" e dois pontos ":"
+	</p>
+
+	<h3>Usando switch/case</h3>
+	<p>
+		O "switch/case" funciona como uma estrutura condicional também;<br>
+		Exemplo:<br>
+
+		<pre><code>
+			<strong>switch</strong>(${expressao}) {
+				<strong>case 1:</strong>
+					${instrucao};
+				<strong>break;</strong>
+				<strong>case 2:</strong>
+					${instrucao};
+				<strong>break;</strong>
+			}
+		</code></pre>
+	</p>
+	<h3>Estruturas de repetição</h3>
+	<h4>Laços de repetição</h4>
+	<p>
+		São estruturas condicionais que repetem uma instrução até atingir determinada condição:<br>
+	</p>
+	<ul>
+		<li>For;</li>
+		<li>For/in;</li>
+		<li>For/of;</li>
+		<li>While;</li>
+		<li>Do/While;</li>
+	</ul>
+
+	<h3>For</h3>
+	<p>
+		Funciona como uma repetição de instr~ução até que a condição seja falsa:<br>
+
+		<pre><code>
+			<strong>for([expressaoInicial];[condicao];[incremento]){ declaracao }</strong>
+		</code></pre>
+
+		Exemplo:<br>
+
+		<pre><code>
+			<strong>var</strong> array = ['valor1', 'valor2', 'valor3', 'valor4']
+
+			<strong>for</strong>(<strong>let</strong>) i = 0; i < array.length; i++) {
+				<strong>console.log</strong>(i);
+			}
+		</code></pre>
+	</p>
+
+	<h3>For/in</h3>
+	<p>
+		Funciona como uma repetição a partir de uma propriedade:
+	</p>
+
+	<pre><code>
+		<strong>
+			for([indice] in [objeto ou array]){
+				declaracao
+			}
+		</strong>
+	</code></pre>
+
+	<p>Exemplo:</p>
+
+	<pre><code>
+		<strong>var</strong> array = ['valor1', 'valor2', 'valor3', 'valor4']
+			<strong>for</strong>(i <strong>in</strong> array){
+				<strong>console.log</strong>(i);
+			}
+	</code></pre>
+
+	<h3>For/of</h3>
+	<p>
+		Funciona como uma repetição a partir de um valor:
+	</p>
+
+	<pre><code>
+		<strong>
+			for([indice] of [array]) {
+				declaracao
+			}
+		</strong>
+	</code></pre>
+
+		<br>Exemplo:
+
+	<pre><code>
+		<strong>var</strong> array = ['valor1','valor2','valor3','valor4']
+			<strong>for</strong>(i <strong>of</strong> array){
+				<strong>console.log</strong>(i);
+			}
+	</code></pre>
+
+	<p>
+		O <strong>For/of</strong> não funciona com objetos pois as propriedades variam, diferentes do índice em um array que sempre serão números inteiros.
+		<br>
+		Mas e se eu quiser pegar o valor mesmo assim?
+		<br>Exemplo:
+
+		<pre><code>
+			<strong>for</strong>(i <strong>of</strong> object.propriedade){
+				<strong>console.log</strong>(i);
+			}
+		</code></pre>
+		Porém, cada caractere dentro do valor será impresso em linhas separadas.
+	</p>
+
+	<h3>While</h3>
+	<p>
+		Executa uma instrução <strong>"enquanto"</strong> determinada condição for verdadeira, a verificação é feita antes da execução;
+		<br>Exemplo:
+
+	<pre><code>
+		<strong>var</strong> a = 0;
+		<strong>while</strong> (a < 10){
+			a++;
+			<strong>console.log</strong>(a);
+		}
+	</code></pre>
+
+	Como ler: enquanto a variável <strong>a</strong> for menor que 10, ela vai receber mais um e imprimir no console.
+	</p>
+
+	<h3>Do/while</h3>
+
+	<p>
+		Executa uma instrução <strong>"até que</strong> determinada condição seja falsa, a verificação é feita depois da execução;
+		<br>Exemplo:
+
+		<pre><code>
+			<strong>var</strong> a = 0;
+			<strong>do</strong> {
+				a++;
+				console.log(a);
+			} <strong>while</strong> (a < 10)
+		</code></pre>
+
+		Como ler: a variável <strong>a</strong> vai receber mais um e primir no console <strong>até que</strong> seu valor chegue a 10.
+	</p>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

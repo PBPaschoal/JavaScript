@@ -1,0 +1,93 @@
+<!-- Aula 06 - Aprofundando em Funções -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aula 06 - Aprofundando em Funções</title>
+</head>
+
+<body>
+	<h1>Objetivos</h1>
+	<p>
+		Tipos de funções/<br>
+		Funções aritméticas - criando uma calculadora;
+	</p>
+
+	<h2>Funções declarativas</h2>
+	<p>
+		São funções que possuem o uso mais comum, deve ser declarada usando a palavra reservada
+		<strong>"function"</strong> seguida do <strong>nome da função</strong>, parêntereses <strong>"()"</strong> e
+		chaves <strong>"{}"</strong>:
+
+	<pre><code>
+			<strong>
+				function nomeDaFuncao() {
+					${instrucao};
+				}
+			</strong>
+		</code></pre>
+
+	<br>O <strong>nome da função</strong> é <strong>obrigatório;</strong>
+
+	</p>
+
+	<h2>Expressões de Funções</h2>
+
+	São funções atribuídas à expressões. A nomeação das funções por expressão é opcional:
+
+	<br>Exemplo:
+
+	<pre><code>
+		<strong>var</strong> funcao = <strong>function nomeDaFuncao() {
+			${instrucao};
+		}
+		</strong>
+	</code></pre>
+
+	<br>Exemplo 2:
+
+	<pre><code>
+		<strong>var</strong> funcao = <strong>function () {
+			${instrucao};
+		}
+		</strong>
+	</code></pre>
+
+	<h2>Arrow Function</h2>
+
+	<p>
+		São funções de expressão de sintaxe curta. Arrow functions sempre serão anônimas, e portanto não podem ser nomeadas.<br>
+		Deve ser declarada com parênteses <strong>"()"</strong>, seguido de <strong>"=>"</strong> e
+		depois chaves <strong>"{}"</strong>
+
+		<br>Exemplo:
+
+		<pre><code>
+			<strong>var</strong> funcao <strong>= () => {
+				${instrucao};
+			}
+			</strong>
+		</code></pre>
+	</p>
+
+	<h2>Criando uma calculadora</h2>
+
+	<p>
+		Para este exercício vamos utilizar alguns métodos nativos do JavaScript:<br>
+
+		<ul>
+			<li><strong>Number() - </strong>para converter valores em números;</li>
+			<li><strong>Prompt() - </strong>para registrar entradas de usuário;</li>
+			<li><strong>Alert() - </strong>para mostrar mensagem ao usuário;</li>
+			<li><strong>Template Strings - </strong>para usar strings junto com expressões;</li>
+		</ul>
+
+	</p>
+
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
