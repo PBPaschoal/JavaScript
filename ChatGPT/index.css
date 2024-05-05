@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(22, 22, 22);
+}
+
+strong {
+    background-color: rgba(255, 0, 0, 0.158);
+}
+
+.pergunta {
+    color: rgb(255, 81, 0);
+}
+
+#meuPais,
+#anoNascimento,
+#salario,
+#diaDaSemana {
+    color: rgb(2, 130, 180);    
+    font-size: 18px;
+}
