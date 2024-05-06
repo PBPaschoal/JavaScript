@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JavaScript 02</title>
+    <style>
+        h1 {
+            color: rgb(255, 255, 0);
+            background-color: rgb(216, 214, 214);
+            text-align: center;
+            text-shadow: 0 0 3px rgb(0, 0, 0);
+        }
+
+        .cor-azul {
+            color: rgb(14, 82, 230)
+        }
+
+        .cor-rosa {
+            color: rgb(255, 0, 242);
+        }
+
+        .cor-verde {
+            color: rgb(0, 160, 53)
+        }
+
+        .variaveis-js {
+            text-align: center;
+        }
+
+        .variaveis-js li {
+            list-style: none;
+            padding-top: 8px;
+        }
+
+        .variaveis-js button {
+            border-radius: 5px;
+            padding: 6px;
+            background-color: rgb(240, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <p>
+        Variáveis e Tipos de Dados:<br>
+        Em JavaScript, as variáveis podem armazenar diferentes tipos de dados, incluindo números, strings, booleanos,
+        arrays, objetos e valores especiais como null e undefined.
+        <br>Exemplo:<br>
+        <code>
+            <em class="cor-azul">let</em> numero = <span class="cor-rosa">10</span>;<br>
+            <em class="cor-azul">let</em> texto = <span class="cor-verde">"Olá, mundo!"</span>;<br>
+            <em class="cor-azul">let</em> booleano = <span class="cor-azul">true</span>;<br>
+            <em class="cor-azul">let</em> array = [<span class="cor-rosa">1</span>, <span class="cor-rosa">2</span>, <span class="cor-rosa">3</span>];<br>
+            <em class="cor-azul">let</em> objeto = { <span class="cor-rosa">nome</span>: <span class="cor-verde">"João"</span>, <span class="cor-rosa">idade</span>: <span class="cor-rosa">30</span> };<br>
+            <em class="cor-azul">let</em> nulo = <span class="cor-azul">null</span>;<br>
+            <em class="cor-azul">let</em> indefinido;
+        </code>
+        <div class="variaveis-js">
+            <ul>
+                <li><button id="variavel-inteiro">Clique para mostrar o número int</button></li>
+                <li><button id="variavel-texto">Clique para mostrar o texto</button></li>
+                <li><button id="variavel-booleano">Clique para mostrar o valor booleano</button></li>
+                <li><button id="variavel-array">Clique para mostrar o valor do array</button></li>
+                <li><button id="variavel-objeto">Clique para mostrar o valor do objeto</button></li>
+                <li><button id="variavel-nulo">Clique para mostrar o valor nulo</button></li>
+            </ul>
+        </div>
+    </p>
+
+    <script>
+        let numero = 10;
+        let texto = "Olá, mundo!";
+        let booleano = true;
+        let array = [1, 2, 3];
+        let objeto = { nome: "João", idade: 30 };
+        let nulo = null;
+        let indefinido;
+
+        document.getElementById("variavel-inteiro").addEventListener("click", function() {
+            document.getElementById("variavel-inteiro").textContent = "Resposta: " + numero;
+        });
+
+        document.getElementById("variavel-texto").addEventListener("click", function() {
+            document.getElementById("variavel-texto").textContent = "Resposta: " + texto;
+        });
+
+        document.getElementById("variavel-booleano").addEventListener("click", function() {
+            document.getElementById("variavel-booleano").textContent = "Resposta: " + booleano;
+        });
+
+        document.getElementById("variavel-array").addEventListener("click", function() {
+            document.getElementById("variavel-array").textContent = "Resposta: " + array;
+        })
+
+        document.getElementById("variavel-objeto").addEventListener("click", function() {
+            document.getElementById("variavel-objeto").textContent = "Resposta: " + JSON.stringify(objeto);
+        })
+
+        document.getElementById("variavel-nulo").addEventListener("click", function() {
+            document.getElementById("variavel-nulo").textContent = "Resposta: " + nulo;
+        })
+
+        
+    </script>
+</body>
+
+</html>
